@@ -459,7 +459,7 @@ input:checked ~ nav {
   align-items: center;
   justify-content: center;
   min-height: 500px;
-  background: url("img/banner.png") center center no-repeat;
+  background: url("../img/banner.png") center center no-repeat;
   background-size: cover; }
   .banner__info {
     max-width: 32rem;
