@@ -1,0 +1,94 @@
+$laptops:1024px;
+$tablets:768px;
+$phones:480px;
+$mini:375px;
+
+@mixin laptops {
+  @media screen and (max-width: $laptops) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin mini {
+  @media screen and (max-width: $mini) {
+    @content;
+  }
+}
+
+.container {
+  @include laptops {
+    width: 85%;
+  }
+}
+
+
+.offers__list {
+  @include laptops {
+    justify-content: space-around;
+  }
+
+  .offers__item {
+    @include laptops {
+      margin: 0;
+
+      &:nth-child(n) {
+        @include laptops {
+          margin-bottom: 20px;
+        }
+      }
+
+      &:nth-child(5) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(6) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+.header {
+  @include tablets {
+    display: none;
+  }
+}
+
+
+.burger-menu {
+  @include tablets {
+    display: block;
+  }
+}
+
+.offers__item {
+  @include phones {
+    width: 12.875rem;
+  }
+
+}
+
+.title {
+  @include phones {
+    font-size: 30px;
+  }
+}
+
+.offers__title-mini {
+  @include phones {
+    font-size: 28px;
+  }
+}

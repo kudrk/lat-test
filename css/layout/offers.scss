@@ -1,0 +1,43 @@
+.offers {
+  color: #000000;
+
+  &__title-mini {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  &__list {
+    color: #149649;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20.875rem;
+    padding: 2.3125rem;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    margin-right: 3.1875rem;
+    margin-bottom: 3.375rem;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(5) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(6) {
+      margin-bottom: 0;
+    }
+  }
+}

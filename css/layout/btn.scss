@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 1.625rem;
+  align-items: center;
+
+  text-align: center;
+
+
+  &__main {
+    background: #17A952;
+    min-width: 21.875rem;
+    padding: 0.8125rem 7rem;
+  }
+
+  &__secondary {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.125rem;
+    background: #17A952;
+    min-width: 8.75rem;
+    padding: 0.875rem 1.5rem;
+    margin-top: auto;
+  }
+}
