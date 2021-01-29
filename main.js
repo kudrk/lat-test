@@ -2,23 +2,14 @@
 
 $(document).ready(() => {
 
-  const item = $('.questions__item');
+  $('.questions__item').on('click', e => {
 
-  $(item).on('click', e => {
-    let drop = $(e.currentTarget).next('.drop');
-    drop.slideToggle();
+    $(e.currentTarget).toggleClass('questions__item_active');
 
-    if (item.hasClass('active')) {
-      $(e.currentTarget).find('.more').css({
-        'transform': 'rotate(0deg)'
-      });
-      $(e.currentTarget).removeClass('active');
-    } else {
-      $(e.currentTarget).find('.more').css({
-        'transform': 'rotate(180deg)'
-      });
-      $(e.currentTarget).addClass('active');
+    const activeQa = $('.questions__item_active');
+    if (activeQa.length > 0) {
+      activeQa.siblings('.questions__item').removeClass('questions__item_active');
+      $(e.currentTarget).addClass('questions__item_active');
     }
   });
 });
-

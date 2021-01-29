@@ -539,6 +539,10 @@ input:checked ~ nav {
   font-size: 1.625rem;
   position: relative;
   cursor: pointer; }
+  .questions__item_active + .drop {
+    display: block; }
+  .questions__item_active > .more {
+    transform: rotate(180deg); }
   .questions__item .more {
     display: inline-block;
     width: 0;
